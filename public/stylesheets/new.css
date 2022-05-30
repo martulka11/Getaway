@@ -1,0 +1,21 @@
+.background {
+    background-image: url("../images/pexels-oliver-sjöström-1078983.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    vertical-align: top;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #3D550C;
+    font-weight: 600;
+}
+
+.card { 
+    background: rgba(255, 255, 255, 0.9);
+}

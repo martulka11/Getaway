@@ -1,0 +1,103 @@
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/new.css"> 
+<div class="h-100">
+<div class="background">
+    <div class="card w-50 p-4 mb-3">
+<div class="row py-5">
+    <h1 class="text-center pb-3">New House</h1>
+    <div class="col-md-8 offset-md-2">
+     <form action="/houses" method="POST"  class="validated-form" enctype="multipart/form-data" novalidate>
+         <div class="mb-3">
+             <label class="form-label" for="title">Title</label>
+             <input class="form-control" type="text" name="house[title]" id="title" required> 
+             <div class="valid-feedback">
+                 Looks good!
+             </div>
+         </div>
+         <div class="mb-3">
+             <label class="form-label "for="location">Location</label>
+             <input class="form-control" type="text" name="house[location]" id="location" required> 
+             <div class="valid-feedback">
+                 Looks good!
+             </div>
+         </div>
+         <div class="mb-3">
+            <label for="image" class="form-label"></label>
+           <input class="form-control" type="file" id="image" name="image" multiple>
+        </div>
+         <div class="mb-3">
+             <label class="form-label "for="price">Price per person</label>
+             <div class="input-group">
+               <span class="input-group-text" id="price-label">from $</span>
+               <input type="number" class="form-control" id="price" placeholder="0.00" aria-label="price"
+               aria-describedby="price-label" name="house[price]" required>
+           </div>
+         </div> 
+        
+            <select class="mb-3 form-select" name="house[place]" aria-label="Default select example">
+                <option selected>Choose Place Category</option>
+                <option value="Forest">Forest</option>
+                <option value="Seaside" >Seaside</option>
+                <option value="Mountains" >Mountains</option>
+                <option value="Lake">Lake</option>
+              </select>
+
+     <!--   <div class="mb-3">
+            <h3>Choose Facilities</h3>
+         <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Swimming pool" name="house[facilities]" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Swimming pool
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Sauna"  name="house[facilities]" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+              Sauna
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Billards"  name="house[facilities]" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+              Billards
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Wifi"  name="house[facilities]" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+              Wifi
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Spa bath"  name="house[facilities]" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+              Spa bath
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Bike"  name="house[facilities]" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+              Bike
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="TV"  name="house[facilities]" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+              TV
+            </label>
+          </div>
+        </div>-->
+
+         <div class="mb-3">
+             <label class="form-label" for="title">Description</label>
+             <textarea class="form-control" type="text" name="house[description]" id="description" required>Description </textarea>
+         </div>
+         <button class="btn btn-success" >Add House</button>
+         </form>
+     
+    </div>
+</div>
+</div>
+</div>
+</div>
+

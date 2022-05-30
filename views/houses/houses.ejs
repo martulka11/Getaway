@@ -1,0 +1,57 @@
+<% layout('layouts/boilerplate') %>
+
+<div id="map" style="width: 100%; height: 500px;"></div>
+
+
+<div class="container d-flex mt-5 flex-row justify-content-around"">
+  <div class="row w-100">
+    <h2 class="m-4">Find your place!</h2>
+    <div class="mb-3 w-50">
+      <label for="searchbar" class="form-label"></label>
+      <input type="text" class="form-control" id="searchbar" placeholder="search...">
+    </div>
+  
+    <div class="my-4 ms-auto p-2 w-25 d-flex align-items-end ju">
+    <select id="sorting" class="form-select" aria-label="Default select example">
+    <option selected>Sort by</option>
+    <option value="1">Low to Hight price</option>
+    <option value="2">Hight to low price</option>
+    <option value="3">From A to Z</option>
+    <option value="4">From Z to A</option>
+  </select>
+  </div>
+  </div>
+  
+</div>
+
+
+
+<% for (let house of houses) {%>
+<div class="container my-5" style="width: 75%;">
+<div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="<%=house.images[0].url%>" class="img-fluid rounded-start" alt="<%=house.images.filename%>">
+     
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+            <h2 class="card-title"><%= house.title %></h2>
+          <p class="card-text"><%= house.description.substring(0,200)%>...</p>
+          <p class="card-text">from <%=house.price%>$</p>
+          <a class="btn btn-success" href="/houses/<%= house._id %>">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <% } %>
+
+ <script> 
+ const mapToken = '<%-process.env.MAPBOX_TOKEN%>'
+ const houses = {features: <%-JSON.stringify(houses)%>}
+ </script>
+
+<script src="./proba.js"></script>
+ <script src="/javascripts/clusterMap.js"></script>

@@ -1,0 +1,69 @@
+html{
+  margin: 0;
+}
+
+h3 {
+  font-size: 3rem;
+  color: black;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 10rem;
+}
+
+.img-bcg {
+  opacity: 0.3;
+}
+
+.animals {
+  background-color: #cfe1b9;
+  width: 100%;
+}
+
+.title{
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    text-shadow: 0 1rem 2rem #6d6875;
+    margin-bottom: 2rem;
+}
+
+
+.comment-container {
+  background-image: url("../images/jimmy-conover-tSepAu4z310-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-bg {
+  background-color: rgba(238, 238, 238, 0.85);
+  margin: 3rem 10rem;
+  padding: 1rem 3rem;
+  width: 70%;
+  box-shadow: 0 2rem 5rem rgba(51, 51, 51, 0.4);
+  transform: skewX(20deg);
+}
+
+.comment {
+  transform: skewX(-20deg);
+  display: flex;
+}
+
+.story-image {
+  width: 13rem;
+  height: 9rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 5rem;
+}
+
+.comment-text {
+  letter-spacing: 0.1rem;
+  size: 1rem;
+  display: flex;
+  align-items: center;
+}
